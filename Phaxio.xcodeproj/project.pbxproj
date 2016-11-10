@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D6D9B921DCE8EC400DE322C /* Fax.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D9B911DCE8EC400DE322C /* Fax.m */; };
+		7D6D9B951DCE8EEC00DE322C /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D9B941DCE8EEC00DE322C /* PhoneNumber.m */; };
 		7D8F980B1DCB8CF40034EC31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F980A1DCB8CF40034EC31 /* main.m */; };
 		7D8F980E1DCB8CF40034EC31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F980D1DCB8CF40034EC31 /* AppDelegate.m */; };
 		7D8F98111DCB8CF40034EC31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F98101DCB8CF40034EC31 /* ViewController.m */; };
 		7D8F98141DCB8CF40034EC31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F98121DCB8CF40034EC31 /* Main.storyboard */; };
 		7D8F98161DCB8CF50034EC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F98151DCB8CF50034EC31 /* Assets.xcassets */; };
 		7D8F98191DCB8CF50034EC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F98171DCB8CF50034EC31 /* LaunchScreen.storyboard */; };
-		7D8F98241DCB8CF50034EC31 /* PhaxioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F98231DCB8CF50034EC31 /* PhaxioTests.m */; };
+		7D8F98301DCBEA080034EC31 /* PhaxioAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F982F1DCBEA080034EC31 /* PhaxioAPI.m */; };
+		7D8F98331DCBEA1A0034EC31 /* Phaxio.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F98321DCBEA1A0034EC31 /* Phaxio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D6D9B901DCE8EC400DE322C /* Fax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fax.h; sourceTree = "<group>"; };
+		7D6D9B911DCE8EC400DE322C /* Fax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fax.m; sourceTree = "<group>"; };
+		7D6D9B931DCE8EEC00DE322C /* PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
+		7D6D9B941DCE8EEC00DE322C /* PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
 		7D8F98061DCB8CF40034EC31 /* Phaxio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phaxio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8F980A1DCB8CF40034EC31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D8F980C1DCB8CF40034EC31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,8 +45,10 @@
 		7D8F98181DCB8CF50034EC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D8F981A1DCB8CF50034EC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D8F981F1DCB8CF50034EC31 /* PhaxioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhaxioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D8F98231DCB8CF50034EC31 /* PhaxioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhaxioTests.m; sourceTree = "<group>"; };
-		7D8F98251DCB8CF50034EC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D8F982E1DCBEA080034EC31 /* PhaxioAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhaxioAPI.h; sourceTree = "<group>"; };
+		7D8F982F1DCBEA080034EC31 /* PhaxioAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhaxioAPI.m; sourceTree = "<group>"; };
+		7D8F98311DCBEA1A0034EC31 /* Phaxio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phaxio.h; sourceTree = "<group>"; };
+		7D8F98321DCBEA1A0034EC31 /* Phaxio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phaxio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				7D8F98081DCB8CF40034EC31 /* Phaxio */,
-				7D8F98221DCB8CF50034EC31 /* PhaxioTests */,
 				7D8F98071DCB8CF40034EC31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +93,14 @@
 				7D8F980D1DCB8CF40034EC31 /* AppDelegate.m */,
 				7D8F980F1DCB8CF40034EC31 /* ViewController.h */,
 				7D8F98101DCB8CF40034EC31 /* ViewController.m */,
+				7D8F982E1DCBEA080034EC31 /* PhaxioAPI.h */,
+				7D8F982F1DCBEA080034EC31 /* PhaxioAPI.m */,
+				7D8F98311DCBEA1A0034EC31 /* Phaxio.h */,
+				7D8F98321DCBEA1A0034EC31 /* Phaxio.m */,
+				7D6D9B901DCE8EC400DE322C /* Fax.h */,
+				7D6D9B911DCE8EC400DE322C /* Fax.m */,
+				7D6D9B931DCE8EEC00DE322C /* PhoneNumber.h */,
+				7D6D9B941DCE8EEC00DE322C /* PhoneNumber.m */,
 				7D8F98121DCB8CF40034EC31 /* Main.storyboard */,
 				7D8F98151DCB8CF50034EC31 /* Assets.xcassets */,
 				7D8F98171DCB8CF50034EC31 /* LaunchScreen.storyboard */,
@@ -100,15 +116,6 @@
 				7D8F980A1DCB8CF40034EC31 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7D8F98221DCB8CF50034EC31 /* PhaxioTests */ = {
-			isa = PBXGroup;
-			children = (
-				7D8F98231DCB8CF50034EC31 /* PhaxioTests.m */,
-				7D8F98251DCB8CF50034EC31 /* Info.plist */,
-			);
-			path = PhaxioTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D8F98111DCB8CF40034EC31 /* ViewController.m in Sources */,
+				7D8F98301DCBEA080034EC31 /* PhaxioAPI.m in Sources */,
 				7D8F980E1DCB8CF40034EC31 /* AppDelegate.m in Sources */,
+				7D6D9B951DCE8EEC00DE322C /* PhoneNumber.m in Sources */,
+				7D6D9B921DCE8EC400DE322C /* Fax.m in Sources */,
 				7D8F980B1DCB8CF40034EC31 /* main.m in Sources */,
+				7D8F98331DCBEA1A0034EC31 /* Phaxio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +234,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D8F98241DCB8CF50034EC31 /* PhaxioTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +420,7 @@
 				7D8F982A1DCB8CF50034EC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D8F982B1DCB8CF50034EC31 /* Build configuration list for PBXNativeTarget "PhaxioTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +429,7 @@
 				7D8F982D1DCB8CF50034EC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

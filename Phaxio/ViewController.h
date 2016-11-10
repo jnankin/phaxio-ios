@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhaxioAPI.h"
+#import "Phaxio.h"
+#import "Fax.h"
+#import "PhoneNumber.h"
 
 @interface ViewController : UIViewController
 
