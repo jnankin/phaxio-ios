@@ -215,21 +215,21 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
 
 - (void)listNumbersWithCountryCode:(NSString*)country_code areaCode:(NSString*)area_code
 {
-    NSString* ampersand = @"";
+    NSString* leading = @"?";
     NSString* parameters = @"";
     
     if (country_code != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?country_code=%@", parameters, country_code];
+        parameters = [NSString stringWithFormat:@"%@%@country_code=%@", parameters, leading, country_code];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     if (area_code != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?area_code=%@", parameters, area_code];
+        parameters = [NSString stringWithFormat:@"%@%@area_code=%@", parameters, leading, area_code];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     NSString* url = [NSString stringWithFormat:@"%@phone_numbers%@", api_url, parameters];
@@ -245,48 +245,49 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
 
 - (void)listAreaCodesAvailableForPurchasingNumbersWithTollFree:(NSString*)toll_free countryCode:(NSString*)country_code country:(NSString*)country state:(NSString*)state
 {
-    NSString* ampersand = @"";
+    NSString* leading = @"?";
     NSString* parameters = @"";
     
     if (toll_free != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?toll_free=%@", parameters, toll_free];
+        parameters = [NSString stringWithFormat:@"%@%@toll_free=%@", parameters, leading, toll_free];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     if (country_code != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?country_code=%@", parameters, country_code];
+        parameters = [NSString stringWithFormat:@"%@%@country_code=%@", parameters, leading, country_code];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     if (country != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?country=%@", parameters, country];
+        parameters = [NSString stringWithFormat:@"%@%@country=%@", parameters, leading, country];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     if (state != nil) {
         
-        parameters = [NSString stringWithFormat:@"%@?state=%@", parameters, state];
+        parameters = [NSString stringWithFormat:@"%@%@state=%@", parameters, leading, state];
         
-        ampersand = @"&";
+        leading = @"&";
     }
     
     NSString* url = [NSString stringWithFormat:@"%@public/area_codes%@", api_url, parameters];
     [self makeGetRequest:url apiMethod:LIST_AREA_CODES];
 }
 
-- (void)createPhaxCode
+-(void)createPhaxCodeWithMetadata:(NSString*)metadata;
 {
     NSString* url = [NSString stringWithFormat:@"%@phax_codes", api_url];
     
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
     [parameters setValue:api_key forKey:@"api_key"];
     [parameters setValue:api_secret forKey:@"api_secret"];
+    [parameters setValue:metadata forKey:@"metadata"];
     
     [self makePostRequest:url postParameters:parameters apiMethod:CREATE_PHAXIO];
 }
@@ -348,7 +349,14 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
 
 -(void)makeGetRequest:(NSString*)url apiMethod:(int)api_method
 {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSString* leading = @"?";
+    if ([url containsString:@"?"])
+    {
+        leading = @"&";
+    }
+    NSString* urlWithKeyAndSecret = [NSString stringWithFormat:@"%@%@api_key=%@&api_secret=%@", url, leading, api_key, api_secret];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlWithKeyAndSecret]];
     [request setHTTPMethod:@"GET"];
     
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -383,7 +391,15 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
 
 -(void)makeDeleteRequest:(NSString*)url apiMethod:(int)api_method
 {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSString* leading = @"?";
+    if ([url containsString:@"?"])
+    {
+        leading = @"&";
+    }
+    NSString* urlWithKeyAndSecret = [NSString stringWithFormat:@"%@%@api_key=%@&api_secret=%@", url, leading, api_key, api_secret];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlWithKeyAndSecret]];
     [request setHTTPMethod:@"DELETE"];
     
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

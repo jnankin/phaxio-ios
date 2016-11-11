@@ -85,7 +85,7 @@
 
 - (void)listAreaCodesAvailableForPurchasingNumbersWithTollFree:(NSString*)toll_free countryCode:(NSString*)country_code country:(NSString*)country state:(NSString*)state;
 
-- (void)createPhaxCode;
+- (void)createPhaxCodeWithMetadata:(NSString*)metadata;
 
 - (void)retrievePhaxCode;
 

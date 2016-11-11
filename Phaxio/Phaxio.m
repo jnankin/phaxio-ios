@@ -43,14 +43,19 @@
     [api listFaxesInDateRangeCreatedBefore:created_before createdAfter:created_after direction:direction status:status phoneNumber:phone_number tag:tag];
 }
 
--(void)createPhaxCode
+-(void)createPhaxCodeWithMetadata:(NSString*)metadata;
 {
-    [api createPhaxCode];
+    [api createPhaxCodeWithMetadata:metadata];
 }
 
 -(void)retrievePhaxCode
 {
     [api retrievePhaxCode];
+}
+
+-(void)retrievePhaxCodeWithID:(NSString*)phax_id
+{
+    [api retrievePhaxCodeWithID:phax_id];
 }
 
 -(void)getPhoneNumber:(NSString*)phone_number
@@ -66,6 +71,11 @@
 -(void)listAreaCodesAvailableForPurchasingNumbersWithTollFree:(NSString*)toll_free countryCode:(NSString*)country_code country:(NSString*)country state:(NSString*)state
 {
     [api listAreaCodesAvailableForPurchasingNumbersWithTollFree:toll_free countryCode:country_code country:country state:state];
+}
+
+- (void)deleteFaxFile:(NSString*)fax_id
+{
+    [api deleteFaxFileWithID:fax_id];
 }
 
 - (void)listOfSupportedCountries:(BOOL)success andResponse:(NSDictionary *)json

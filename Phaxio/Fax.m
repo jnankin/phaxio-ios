@@ -46,7 +46,7 @@
         //error
     }
     
-    [parameters setValue:to_phone_numbers forKey:@"to"];
+    [parameters setValue:@"515-371-9995" forKey:@"to"];
 
     if (file != nil)
     {
@@ -161,7 +161,7 @@
     [[self delegate] resentFax:success andResponse:json];
 }
 
-- (void)deletedFax:(BOOL)success andResponse:(NSDictionary*)json
+- (void)deleteFax:(BOOL)success andResponse:(NSDictionary*)json
 {
     [[self delegate] deletedFax:success andResponse:json];
 }

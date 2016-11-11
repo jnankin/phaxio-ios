@@ -31,7 +31,7 @@
 
 -(id)initPhoneNumber;
 
--(void)provisionPhoneNumberWithCallbackUrl;
+-(void)provisionPhoneNumber;
 
 -(void)provisionPhoneNumberWithCallbackUrl:(NSString*)callback_url;
 

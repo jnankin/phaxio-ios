@@ -44,7 +44,9 @@
 
 - (void)listFaxesInDateRangeCreatedBefore:(NSDate*)created_before createdAfter:(NSDate*)created_after direction:(NSString*)direction status:(NSString*)status phoneNumber:(NSString*)phone_number tag:(NSString*)tag;
 
--(void)createPhaxCode;
+-(void)createPhaxCodeWithMetadata:(NSString*)metadata;
+
+-(void)retrievePhaxCodeWithID:(NSString*)phax_id;
 
 -(void)retrievePhaxCode;
 
@@ -53,5 +55,7 @@
 -(void)listPhoneNumbersWithCountryCode:(NSString*)country_code areaCode:(NSString*)area_code;
 
 -(void)listAreaCodesAvailableForPurchasingNumbersWithTollFree:(NSString*)toll_free countryCode:(NSString*)country_code country:(NSString*)country state:(NSString*)state;
+
+- (void)deleteFaxFile:(NSString*)fax_id;
 
 @end

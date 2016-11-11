@@ -25,7 +25,7 @@
     return self;
 }
 
--(void)provisionPhoneNumberWithCallbackUrl
+-(void)provisionPhoneNumber;
 {
     [self provisionPhoneNumberWithCallbackUrl:nil];
 }
