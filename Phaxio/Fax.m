@@ -178,12 +178,12 @@
     [[self delegate] deletedFax:success andResponse:json];
 }
 
-- (void)contentFile:(BOOL)success andResponse:(UIImage*)img
+- (void)contentFile:(BOOL)success andResponse:(NSData*)content
 {
     if (success) {
         content_file = content;
     }
-    [[self delegate] largeThumbnail:success andResponse:img];
+    [[self delegate] contentFile:success andResponse:content_file];
 }
 
 - (void)smallThumbnail:(BOOL)success andResponse:(UIImage*)img
