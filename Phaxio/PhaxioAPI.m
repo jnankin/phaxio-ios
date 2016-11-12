@@ -329,9 +329,6 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
             }
         }
         
-        // If response was JSON (hopefully you designed web service that returns JSON!),
-        // you might parse it like so:
-        //
          NSError *parseError;
 
          NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
@@ -371,19 +368,23 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
             }
         }
         
-        // If response was JSON (hopefully you designed web service that returns JSON!),
-        // you might parse it like so:
-        //
         NSError *parseError;
         
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        if (!json) {
-            NSLog(@"JSON parse error: %@", parseError);
-        } else {
-            NSLog(@"responseObject = %@", json);
+        if  (api_method != FAX_CONTENT_FILE && api_method != FAX_THUMBNAIL_L && api_method != FAX_THUMBNAIL_L)
+        {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            if (!json) {
+                NSLog(@"JSON parse error: %@", parseError);
+            } else {
+                NSLog(@"responseObject = %@", json);
+            }
+            
+            [self handleGetResponseForAPIMethod:api_method AndJSONResponse:json];
         }
-        
-        [self handleGetResponseForAPIMethod:api_method AndJSONResponse:json];
+        else
+        {
+            [self handleGetFileResponseForAPIMethod:api_method AndData:data];
+        }
         
     }];
     [task resume];
@@ -497,21 +498,6 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
         BOOL success = [json valueForKey:@"success"];
         [[self delegate] faxInfo:success andResponse:json];
     }
-    else if (api_method == FAX_CONTENT_FILE)
-    {
-        BOOL success = [json valueForKey:@"success"];
-        [[self delegate] contentFile:success andResponse:json];
-    }
-    else if(api_method == FAX_THUMBNAIL_S)
-    {
-        BOOL success = [json valueForKey:@"success"];
-        [[self delegate] smallThumbnail:success andResponse:json];
-    }
-    else if(api_method == FAX_THUMBNAIL_L)
-    {
-        BOOL success = [json valueForKey:@"success"];
-        [[self delegate] largeThumbnail:success andResponse:json];
-    }
     else if(api_method == LIST_FAXES)
     {
         BOOL success = [json valueForKey:@"success"];
@@ -551,6 +537,25 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
     {
         BOOL success = [json valueForKey:@"success"];
         [[self delegate] getAccountStatus:success andResponse:json];
+    }
+}
+
+- (void)handleGetFileResponseForAPIMethod:(int)api_method AndData:(NSData*)data
+{
+    if (api_method == FAX_THUMBNAIL_L)
+    {
+        BOOL success = data != nil;
+        [[self delegate] largeThumbnail:success andResponse:[UIImage imageWithData:data]];
+    }
+    else if (api_method == FAX_THUMBNAIL_S)
+    {
+        BOOL success = data != nil;
+        [[self delegate] smallThumbnail:success andResponse:[UIImage imageWithData:data]];
+    }
+    else if(api_method == FAX_CONTENT_FILE)
+    {
+        BOOL success = data != nil;
+        [[self delegate] contentFile:success andResponse:data];
     }
 }
 

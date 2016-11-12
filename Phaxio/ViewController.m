@@ -17,12 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor redColor];
     
     //Initial setup with the api key and secret.
-    [PhaxioAPI setAPIKey:@"thiskey" andSecret:@"thissecret"];
-    
-    //Phaxio account methods used to retrieve information relevant to the Phaxio account
-    Phaxio* phaxio = [[Phaxio alloc] initPhaxio];
+    [PhaxioAPI setAPIKey:@"key" andSecret:@"secret"];
 }
 
 
@@ -30,6 +28,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

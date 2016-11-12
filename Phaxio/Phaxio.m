@@ -91,13 +91,11 @@
 - (void)faxInfo:(BOOL)success andResponse:(NSDictionary*)json
 {
     [[self delegate] faxInfo:success andResponse:json];
-    //return fax
 }
 
 - (void)listFaxes:(BOOL)success andResponse:(NSDictionary*)json
 {
     [[self delegate] listFaxes:success andResponse:json];
-    //return faxes
 }
 
 - (void)createPhaxio:(BOOL)success andResponse:(NSDictionary*)json
@@ -113,7 +111,6 @@
 - (void)getNumberInfo:(BOOL)success andResponse:(NSDictionary*)json
 {
     [[self delegate] getNumberInfo:success andResponse:json];
-    //return number
 }
 
 - (void)deleteFaxFile:(BOOL)success andResponse:(NSDictionary*)json
@@ -124,7 +121,6 @@
 - (void)listNumbers:(BOOL)success andResponse:(NSDictionary*)json
 {
     [[self delegate] listNumbers:success andResponse:json];
-    //return numbers
 }
 
 - (void)listAreaCodes:(BOOL)success andResponse:(NSDictionary*)json

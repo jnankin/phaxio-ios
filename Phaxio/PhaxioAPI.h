@@ -16,9 +16,9 @@
 - (void)sentFax:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)cancelledFax:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)resentFax:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)contentFile:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)smallThumbnail:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)largeThumbnail:(BOOL)success andResponse:(NSDictionary*)json;
+- (void)contentFile:(BOOL)success andResponse:(NSData*)data;
+- (void)smallThumbnail:(BOOL)success andResponse:(UIImage*)img;
+- (void)largeThumbnail:(BOOL)success andResponse:(UIImage*)img;
 - (void)testReceive:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)provisionNumber:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)createPhaxio:(BOOL)success andResponse:(NSDictionary*)json;

@@ -18,9 +18,9 @@
 - (void)cancelledFax:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)resentFax:(BOOL)success andResponse:(NSDictionary*)json;
 - (void)deletedFax:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)contentFile:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)smallThumbnail:(BOOL)success andResponse:(NSDictionary*)json;
-- (void)largeThumbnail:(BOOL)success andResponse:(NSDictionary*)json;
+- (void)contentFile:(BOOL)success andResponse:(NSData*)data;
+- (void)smallThumbnail:(BOOL)success andResponse:(UIImage*)img;
+- (void)largeThumbnail:(BOOL)success andResponse:(UIImage*)img;
 
 @required
 @end
@@ -30,14 +30,14 @@
     PhaxioAPI* api;
     UIImage* small_thumbnail;
     UIImage* large_thumbnail;
-    UIImage* content_file;
+    NSData* content_file;
 }
 
 @property (nonatomic, retain) id <FaxDelegate> delegate;
 
 -(id)initFax;
 
--(void)sendWithBatchDelay:(NSString*)batch_delay batchCollisionAvoidance:(NSString*) batch_collision_avoidance callbackUrl:(NSString*)callback_url cancelTimeout:(NSString*)cancel_timeout tag:(NSString*)tag tagValue:(NSString*)tag_value callerId:(NSString*)caller_id testFail:(NSString*)test_fail;
+-(void)sendWithBatchDelay:(NSInteger*)batch_delay batchCollisionAvoidance:(BOOL) batch_collision_avoidance callbackUrl:(NSString*)callback_url cancelTimeout:(NSInteger*)cancel_timeout tag:(NSString*)tag tagValue:(NSString*)tag_value callerId:(NSString*)caller_id testFail:(NSString*)test_fail;
 
 -(void)send;
 
@@ -47,7 +47,7 @@
 
 -(void)deleteFax;
 
--(UIImage*)contentFile;
+-(NSData*)contentFile;
 
 -(UIImage*)smallThumbnail;
 
@@ -55,7 +55,7 @@
 
 @property (nonatomic, retain) NSMutableArray* to_phone_numbers;
 @property (nonatomic, retain) NSString* fax_id;
-@property (nonatomic, retain) NSString* file;
+@property (nonatomic, retain) NSData* file;
 @property (nonatomic, retain) NSString* content_url;
 @property (nonatomic, retain) NSString* header_text;
 

@@ -12,7 +12,7 @@
 #import "Fax.h"
 #import "PhoneNumber.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <FaxDelegate>
 
 
 @end

@@ -32,7 +32,7 @@
     [self sendWithBatchDelay:nil batchCollisionAvoidance:nil callbackUrl:nil cancelTimeout:nil tag:nil tagValue:nil callerId:nil testFail:nil];
 }
 
--(void)sendWithBatchDelay:(NSString*)batch_delay batchCollisionAvoidance:(NSString*) batch_collision_avoidance callbackUrl:(NSString*)callback_url cancelTimeout:(NSString*)cancel_timeout tag:(NSString*)tag tagValue:(NSString*)tag_value callerId:(NSString*)caller_id testFail:(NSString*)test_fail
+-(void)sendWithBatchDelay:(NSInteger*)batch_delay batchCollisionAvoidance:(BOOL) batch_collision_avoidance callbackUrl:(NSString*)callback_url cancelTimeout:(NSInteger*)cancel_timeout tag:(NSString*)tag tagValue:(NSString*)tag_value callerId:(NSString*)caller_id testFail:(NSString*)test_fail
 {
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
     
@@ -46,7 +46,19 @@
         //error
     }
     
-    [parameters setValue:@"515-371-9995" forKey:@"to"];
+    if ([to_phone_numbers count] == 1)
+    {
+        [parameters setValue:[to_phone_numbers objectAtIndex:0] forKey:@"to"];
+    }
+    else
+    {
+        NSString* toNumbers = [to_phone_numbers objectAtIndex:0];
+        for (int i = 1; i < [to_phone_numbers count]; i++)
+        {
+            toNumbers = [NSString stringWithFormat:@"%@,%@", toNumbers, [to_phone_numbers objectAtIndex:i]];
+        }
+        [parameters setValue:toNumbers forKey:@"to[]"];
+    }
 
     if (file != nil)
     {
@@ -65,12 +77,12 @@
     
     if (batch_delay != nil)
     {
-        [parameters setValue:batch_delay forKey:@"batch_delay"];
+        [parameters setValue:[NSString stringWithFormat:@"%ld",*batch_delay] forKey:@"batch_delay"];
     }
     
-    if (batch_collision_avoidance != nil)
+    if (batch_collision_avoidance)
     {
-        [parameters setValue:batch_collision_avoidance forKey:@"batch_collision_avoidance"];
+        [parameters setValue:@"true" forKey:@"batch_collision_avoidance"];
     }
     
     if (callback_url != nil)
@@ -80,7 +92,7 @@
     
     if (cancel_timeout != nil)
     {
-        [parameters setValue:cancel_timeout forKey:@"cancel_timeout"];
+        [parameters setValue:[NSString stringWithFormat:@"%ld", *cancel_timeout] forKey:@"cancel_timeout"];
     }
     
     if (tag != nil)
@@ -116,7 +128,7 @@
     [api deleteFaxWithID:fax_id];
 }
 
--(UIImage*)contentFile
+-(NSData*)contentFile
 {
     if (content_file == nil)
     {
@@ -166,28 +178,28 @@
     [[self delegate] deletedFax:success andResponse:json];
 }
 
-- (void)contentFile:(BOOL)success andResponse:(NSDictionary*)json
+- (void)contentFile:(BOOL)success andResponse:(UIImage*)img
 {
-    //if (success) {
-    //    content_file = content;
-    //}
-    [[self delegate] largeThumbnail:success andResponse:json];
+    if (success) {
+        content_file = content;
+    }
+    [[self delegate] largeThumbnail:success andResponse:img];
 }
 
-- (void)smallThumbnail:(BOOL)success andResponse:(NSDictionary*)json
+- (void)smallThumbnail:(BOOL)success andResponse:(UIImage*)img
 {
-    //if (success) {
-    //   small_thumbnail = thumbnail;
-    //}
-    [[self delegate] smallThumbnail:success andResponse:json];
+    if (success) {
+       small_thumbnail = img;
+    }
+    [[self delegate] smallThumbnail:success andResponse:img];
 }
 
-- (void)largeThumbnail:(BOOL)success andResponse:(NSDictionary*)json
+- (void)largeThumbnail:(BOOL)success andResponse:(UIImage*)img
 {
-    //if (success) {
-    //    large_thumbnail = thumbnail;
-    //}
-    [[self delegate] largeThumbnail:success andResponse:json];
+    if (success) {
+        large_thumbnail = img;
+    }
+    [[self delegate] largeThumbnail:success andResponse:img];
 }
 
 @end
