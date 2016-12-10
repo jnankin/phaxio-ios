@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7D6D9B921DCE8EC400DE322C /* Fax.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D9B911DCE8EC400DE322C /* Fax.m */; };
 		7D6D9B951DCE8EEC00DE322C /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D9B941DCE8EEC00DE322C /* PhoneNumber.m */; };
+		7D6D9BF71DF4D7D500DE322C /* PhaxioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D9BF61DF4D7D500DE322C /* PhaxioTests.m */; };
+		7D6D9BF91DF4D80800DE322C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D6D9BF81DF4D80800DE322C /* Info.plist */; };
 		7D8F980B1DCB8CF40034EC31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F980A1DCB8CF40034EC31 /* main.m */; };
 		7D8F980E1DCB8CF40034EC31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F980D1DCB8CF40034EC31 /* AppDelegate.m */; };
 		7D8F98111DCB8CF40034EC31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F98101DCB8CF40034EC31 /* ViewController.m */; };
@@ -17,6 +19,8 @@
 		7D8F98191DCB8CF50034EC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8F98171DCB8CF50034EC31 /* LaunchScreen.storyboard */; };
 		7D8F98301DCBEA080034EC31 /* PhaxioAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F982F1DCBEA080034EC31 /* PhaxioAPI.m */; };
 		7D8F98331DCBEA1A0034EC31 /* Phaxio.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F98321DCBEA1A0034EC31 /* Phaxio.m */; };
+		7DEA81DC1DFA06A500E2A703 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEA81DB1DFA06A500E2A703 /* apple.png */; };
+		DE9EE65D3E899FB6E5A117BD /* libPods-PhaxioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C35241052AB17693AC6B502C /* libPods-PhaxioTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3085E6A7483E32405BF8AB69 /* Pods-PhaxioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhaxioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhaxioTests/Pods-PhaxioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D6D9B901DCE8EC400DE322C /* Fax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fax.h; sourceTree = "<group>"; };
 		7D6D9B911DCE8EC400DE322C /* Fax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fax.m; sourceTree = "<group>"; };
 		7D6D9B931DCE8EEC00DE322C /* PhoneNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
 		7D6D9B941DCE8EEC00DE322C /* PhoneNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
+		7D6D9BF61DF4D7D500DE322C /* PhaxioTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhaxioTests.m; sourceTree = "<group>"; };
+		7D6D9BF81DF4D80800DE322C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PhaxioTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		7D8F98061DCB8CF40034EC31 /* Phaxio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phaxio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8F980A1DCB8CF40034EC31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D8F980C1DCB8CF40034EC31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +56,10 @@
 		7D8F982F1DCBEA080034EC31 /* PhaxioAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhaxioAPI.m; sourceTree = "<group>"; };
 		7D8F98311DCBEA1A0034EC31 /* Phaxio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phaxio.h; sourceTree = "<group>"; };
 		7D8F98321DCBEA1A0034EC31 /* Phaxio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phaxio.m; sourceTree = "<group>"; };
+		7DEA81DB1DFA06A500E2A703 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		C35241052AB17693AC6B502C /* libPods-PhaxioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhaxioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D161B6B2387ECA88F4E69F3F /* Pods-PhaxioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhaxioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhaxioTests/Pods-PhaxioTests.release.xcconfig"; sourceTree = "<group>"; };
+		F09B1E1C4B44A5853CED4CEC /* libPods-Phaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Phaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +74,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9EE65D3E899FB6E5A117BD /* libPods-PhaxioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CB2050738F71BA7CC418C22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F09B1E1C4B44A5853CED4CEC /* libPods-Phaxio.a */,
+				C35241052AB17693AC6B502C /* libPods-PhaxioTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35B28DD4D82A64A38A6402ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3085E6A7483E32405BF8AB69 /* Pods-PhaxioTests.debug.xcconfig */,
+				D161B6B2387ECA88F4E69F3F /* Pods-PhaxioTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D6D9BF51DF4D78500DE322C /* PhaxioTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D6D9BF61DF4D7D500DE322C /* PhaxioTests.m */,
+				7D6D9BF81DF4D80800DE322C /* Info.plist */,
+			);
+			name = PhaxioTests;
+			path = Phaxio;
+			sourceTree = "<group>";
+		};
 		7D8F97FD1DCB8CF40034EC31 = {
 			isa = PBXGroup;
 			children = (
 				7D8F98081DCB8CF40034EC31 /* Phaxio */,
+				7D6D9BF51DF4D78500DE322C /* PhaxioTests */,
 				7D8F98071DCB8CF40034EC31 /* Products */,
+				35B28DD4D82A64A38A6402ED /* Pods */,
+				1CB2050738F71BA7CC418C22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +156,7 @@
 		7D8F98091DCB8CF40034EC31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7DEA81DB1DFA06A500E2A703 /* apple.png */,
 				7D8F980A1DCB8CF40034EC31 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -142,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D8F982B1DCB8CF50034EC31 /* Build configuration list for PBXNativeTarget "PhaxioTests" */;
 			buildPhases = (
+				2B3244135EBA52C53FDFE70B /* [CP] Check Pods Manifest.lock */,
 				7D8F981B1DCB8CF50034EC31 /* Sources */,
 				7D8F981C1DCB8CF50034EC31 /* Frameworks */,
 				7D8F981D1DCB8CF50034EC31 /* Resources */,
+				776B2A8BA47A5D7721FCFA5E /* [CP] Embed Pods Frameworks */,
+				EDA9A220A62C5CF458286C5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6D9BF91DF4D80800DE322C /* Info.plist in Resources */,
 				7D8F98191DCB8CF50034EC31 /* LaunchScreen.storyboard in Resources */,
 				7D8F98161DCB8CF50034EC31 /* Assets.xcassets in Resources */,
 				7D8F98141DCB8CF40034EC31 /* Main.storyboard in Resources */,
+				7DEA81DC1DFA06A500E2A703 /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +263,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B3244135EBA52C53FDFE70B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		776B2A8BA47A5D7721FCFA5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhaxioTests/Pods-PhaxioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDA9A220A62C5CF458286C5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhaxioTests/Pods-PhaxioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D8F98021DCB8CF40034EC31 /* Sources */ = {
@@ -234,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6D9BF71DF4D7D500DE322C /* PhaxioTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +477,7 @@
 		};
 		7D8F982C1DCB8CF50034EC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3085E6A7483E32405BF8AB69 /* Pods-PhaxioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhaxioTests/Info.plist;
@@ -391,6 +490,7 @@
 		};
 		7D8F982D1DCB8CF50034EC31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D161B6B2387ECA88F4E69F3F /* Pods-PhaxioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PhaxioTests/Info.plist;

@@ -34,8 +34,8 @@ int DELETE_FAX = 18;
 int DELETE_FILE = 19;
 int RELEASE_PHONE_NUMBER = 20;
 
-static NSString* api_key = @"";
-static NSString* api_secret = @"";
+static NSString* api_key = @"key";
+static NSString* api_secret = @"secret";
 
 NSString* api_url = @"https://api.phaxio.com/v2/";
 
@@ -71,7 +71,6 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
     [parameters setValue:api_secret forKey:@"api_secret"];
     
     [self makePostRequest:url postParameters:parameters apiMethod:RESEND_FAX];
-    //callback_url
 }
 
 - (void)testReceive
@@ -248,28 +247,28 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
     NSString* leading = @"?";
     NSString* parameters = @"";
     
-    if (toll_free != nil) {
+    if (toll_free != nil && ![toll_free isEqualToString:@""]) {
         
         parameters = [NSString stringWithFormat:@"%@%@toll_free=%@", parameters, leading, toll_free];
         
         leading = @"&";
     }
     
-    if (country_code != nil) {
+    if (country_code != nil && ![country_code isEqualToString:@""]) {
         
         parameters = [NSString stringWithFormat:@"%@%@country_code=%@", parameters, leading, country_code];
         
         leading = @"&";
     }
     
-    if (country != nil) {
+    if (country != nil && ![country isEqualToString:@""]) {
         
         parameters = [NSString stringWithFormat:@"%@%@country=%@", parameters, leading, country];
         
         leading = @"&";
     }
     
-    if (state != nil) {
+    if (state != nil && ![state isEqualToString:@""]) {
         
         parameters = [NSString stringWithFormat:@"%@%@state=%@", parameters, leading, state];
         
@@ -315,8 +314,46 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[self httpBodyForParamsDictionary:parameters]];
     
+    if ([parameters valueForKey:@"file"] != nil)
+    {
+        NSString *boundaryConstant = @"----------V2nBsIHs01cEs16iSu91ia";
+        
+        NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundaryConstant];
+        
+        [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
+        
+        NSMutableData *mutableData = [NSMutableData data];
+        NSData* photoData = [parameters valueForKey:@"file"];
+        [parameters removeObjectForKey:@"file"];
+        
+        NSArray* parameterArray = [parameters allKeys];
+        
+        for (int i = 0; i < [parameterArray count]; i++) {
+            NSString* parameter = [parameterArray objectAtIndex:i];
+            [mutableData appendData:[[NSString stringWithFormat:@"--%@\r\n", boundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+            [mutableData appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", parameter] dataUsingEncoding:NSUTF8StringEncoding]];
+            [mutableData appendData:[[NSString stringWithFormat:@"%@\r\n", [parameters objectForKey:parameter]] dataUsingEncoding:NSUTF8StringEncoding]];
+        }
+        
+        NSString* fileParamConstant = @"file";
+        if (photoData) {
+            [mutableData appendData:[[NSString stringWithFormat:@"--%@\r\n", boundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+            [mutableData appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", fileParamConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+            [mutableData appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+            [mutableData appendData:photoData];
+            [mutableData appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+        }
+        
+        [mutableData appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        [request setHTTPBody:mutableData];
+    }
+    else
+    {
+        [request setHTTPBody:[self httpBodyForParamsDictionary:parameters]];
+    }
+
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"dataTaskWithRequest error: %@", error);
@@ -360,9 +397,9 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
         if (error) {
             NSLog(@"dataTaskWithRequest error: %@", error);
         }
-        
+
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
         if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
             if (statusCode != 200) {
                 NSLog(@"Expected responseCode == 200; received %ld", (long)statusCode);
             }
@@ -370,7 +407,7 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
         
         NSError *parseError;
         
-        if  (api_method != FAX_CONTENT_FILE && api_method != FAX_THUMBNAIL_L && api_method != FAX_THUMBNAIL_L)
+        if  (api_method != FAX_CONTENT_FILE && api_method != FAX_THUMBNAIL_S && api_method != FAX_THUMBNAIL_L)
         {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
             if (!json) {
@@ -383,7 +420,7 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
         }
         else
         {
-            [self handleGetFileResponseForAPIMethod:api_method AndData:data];
+            [self handleGetFileResponseForAPIMethod:api_method AndData:data AndSuccess:statusCode];
         }
         
     }];
@@ -540,21 +577,21 @@ NSString* api_url = @"https://api.phaxio.com/v2/";
     }
 }
 
-- (void)handleGetFileResponseForAPIMethod:(int)api_method AndData:(NSData*)data
+- (void)handleGetFileResponseForAPIMethod:(int)api_method AndData:(NSData*)data AndSuccess:(NSInteger)statusCode
 {
     if (api_method == FAX_THUMBNAIL_L)
     {
-        BOOL success = data != nil;
+        BOOL success = statusCode != 500;
         [[self delegate] largeThumbnail:success andResponse:[UIImage imageWithData:data]];
     }
     else if (api_method == FAX_THUMBNAIL_S)
     {
-        BOOL success = data != nil;
+        BOOL success = statusCode != 500;
         [[self delegate] smallThumbnail:success andResponse:[UIImage imageWithData:data]];
     }
     else if(api_method == FAX_CONTENT_FILE)
     {
-        BOOL success = data != nil;
+        BOOL success = statusCode != 500;
         [[self delegate] contentFile:success andResponse:data];
     }
 }

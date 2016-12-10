@@ -33,15 +33,24 @@
 -(void)provisionPhoneNumberWithCallbackUrl:(NSString*)callback_url
 {
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    BOOL error = NO;
     
     if (country_code == nil)
     {
-        //error
+        NSMutableDictionary* response = [[NSMutableDictionary alloc] init];
+        [response setValue:@"NO" forKey:@"success"];
+        [response setValue:@"You need to provide a country code to provision a number." forKey:@"message"];
+        [[self delegate] provisionNumber:NO andResponse:response];
+        error = YES;
     }
     
     if (area_code == nil)
     {
-        //error
+        NSMutableDictionary* response = [[NSMutableDictionary alloc] init];
+        [response setValue:@"NO" forKey:@"success"];
+        [response setValue:@"You need to provide an area code to provision a number." forKey:@"message"];
+        [[self delegate] provisionNumber:NO andResponse:response];
+        error = YES;
     }
     
     [parameters setValue:country_code forKey:@"country_code"];
@@ -52,7 +61,10 @@
         [parameters setValue:callback_url forKey:@"callback_url"];
     }
     
-    [api provisionPhoneNumberWithPostParameters:parameters];
+    if (!error)
+    {
+        [api provisionPhoneNumberWithPostParameters:parameters];
+    }
 }
 
 -(void)releasePhoneNumber
