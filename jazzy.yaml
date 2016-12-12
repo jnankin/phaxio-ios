@@ -1,0 +1,5 @@
+objc: true
+sdk: iphone
+umbrella_header: Phaxio/Phaxio.h
+framework_root: ./
+exclude: "PhaxioAPI/PhaxioAPI.h"

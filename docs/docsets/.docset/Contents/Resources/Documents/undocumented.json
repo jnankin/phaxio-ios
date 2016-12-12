@@ -1,0 +1,355 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 13,
+      "symbol": "PhaxioAPIDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 16,
+      "symbol": "PhaxioAPIDelegate.-sentFax:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 17,
+      "symbol": "PhaxioAPIDelegate.-cancelledFax:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 18,
+      "symbol": "PhaxioAPIDelegate.-resentFax:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 19,
+      "symbol": "PhaxioAPIDelegate.-contentFile:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 20,
+      "symbol": "PhaxioAPIDelegate.-smallThumbnail:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 21,
+      "symbol": "PhaxioAPIDelegate.-largeThumbnail:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 22,
+      "symbol": "PhaxioAPIDelegate.-testReceive:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 23,
+      "symbol": "PhaxioAPIDelegate.-provisionNumber:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 24,
+      "symbol": "PhaxioAPIDelegate.-createPhaxio:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 25,
+      "symbol": "PhaxioAPIDelegate.-faxInfo:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 26,
+      "symbol": "PhaxioAPIDelegate.-listFaxes:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 27,
+      "symbol": "PhaxioAPIDelegate.-listOfSupportedCountries:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 28,
+      "symbol": "PhaxioAPIDelegate.-getNumberInfo:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 29,
+      "symbol": "PhaxioAPIDelegate.-listNumbers:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 30,
+      "symbol": "PhaxioAPIDelegate.-listAreaCodes:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 31,
+      "symbol": "PhaxioAPIDelegate.-retrievePhaxCode:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 32,
+      "symbol": "PhaxioAPIDelegate.-getAccountStatus:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 33,
+      "symbol": "PhaxioAPIDelegate.-deleteFax:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 34,
+      "symbol": "PhaxioAPIDelegate.-deleteFaxFile:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 35,
+      "symbol": "PhaxioAPIDelegate.-releasePhoneNumber:andResponse:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 40,
+      "symbol": "PhaxioAPI",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 42,
+      "symbol": "PhaxioAPI.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 44,
+      "symbol": "PhaxioAPI.-createAndSendFaxWithParameters:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 46,
+      "symbol": "PhaxioAPI.-cancelFax:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 48,
+      "symbol": "PhaxioAPI.-resendFax:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 50,
+      "symbol": "PhaxioAPI.-testReceive",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 52,
+      "symbol": "PhaxioAPI.-getFaxInfoWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 54,
+      "symbol": "PhaxioAPI.-getFaxContentFileWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 56,
+      "symbol": "PhaxioAPI.-getFaxContentThumbnailSmallWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 58,
+      "symbol": "PhaxioAPI.-getFaxContentThumbnailLargeWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 60,
+      "symbol": "PhaxioAPI.-deleteFaxWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 62,
+      "symbol": "PhaxioAPI.-deleteFaxFileWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 64,
+      "symbol": "PhaxioAPI.-listFaxesInDateRangeCreatedBefore:createdAfter:direction:status:phoneNumber:tag:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 66,
+      "symbol": "PhaxioAPI.-listSentFaxes",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 68,
+      "symbol": "PhaxioAPI.-listReceivedFaxes",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 70,
+      "symbol": "PhaxioAPI.-listFaxesWithStatus:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 72,
+      "symbol": "PhaxioAPI.-listFaxesForPhoneNumber:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 74,
+      "symbol": "PhaxioAPI.-listFaxesForTag:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 76,
+      "symbol": "PhaxioAPI.-getAListOfSupportedCountries",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 78,
+      "symbol": "PhaxioAPI.-provisionPhoneNumberWithPostParameters:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 80,
+      "symbol": "PhaxioAPI.-getNumberInfoForNumber:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 82,
+      "symbol": "PhaxioAPI.-listNumbersWithCountryCode:areaCode:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 84,
+      "symbol": "PhaxioAPI.-releasePhoneNumber:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 86,
+      "symbol": "PhaxioAPI.-listAreaCodesAvailableForPurchasingNumbersWithTollFree:countryCode:country:state:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 88,
+      "symbol": "PhaxioAPI.-createPhaxCodeWithMetadata:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 90,
+      "symbol": "PhaxioAPI.-retrievePhaxCode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 92,
+      "symbol": "PhaxioAPI.-retrievePhaxCodeWithID:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 94,
+      "symbol": "PhaxioAPI.-getAccountStatus",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nickschulze/Desktop/iOS Dev/Phaxio/Phaxio/PhaxioAPI.h",
+      "line": 96,
+      "symbol": "PhaxioAPI.+setAPIKey:andSecret:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/nickschulze/Desktop/iOS Dev/Phaxio"
+}

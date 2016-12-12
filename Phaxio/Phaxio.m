@@ -9,7 +9,6 @@
 #import "Phaxio.h"
 
 @implementation Phaxio
-
 @synthesize delegate;
 
 -(id)initPhaxio

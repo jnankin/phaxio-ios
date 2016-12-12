@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (57% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Fax.html">Fax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Phaxio.html">Phaxio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PhaxioAPI.html">PhaxioAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PhoneNumber.html">PhoneNumber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/FaxDelegate.html">FaxDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PhaxioAPIDelegate.html">PhaxioAPIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PhaxioDelegate.html">PhaxioDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PhoneNumberDelegate.html">PhoneNumberDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#ios-phaxio' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='ios-phaxio'>ios-phaxio</h1>
+
+<p>Send faxes with <a href="http://www.phaxio.com">Phaxio</a>.</p>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<a href='#cocoa-pods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='cocoa-pods'>Cocoa-Pods</h4>
+
+<ol>
+<li><p>If you haven&rsquo;t alrady, install the latest version of <a href="https://guides.cocoapods.org/using/getting-started.html">CocoaPods</a></p></li>
+<li><p>Add this line to your <code>Podfile</code>:
+<code>pod &#39;Phaxio&#39;</code></p></li>
+<li><p>Run <code>pod install</code></p></li>
+<li><p>Don&rsquo;t forget to use <code>.workspace</code> to open your project in Xcode</p></li>
+</ol>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='carthage'>Carthage</h4>
+
+<ol>
+<li><p>If you haven&rsquo;t alrady, install the latest version of <a href="https://github.com/Carthage/Carthage#installing-carthage">Carthage</a></p></li>
+<li><p>Add this line to your <code>Cartfile</code>: 
+<code>github &quot;phaxio/phaxio-ios&quot;</code></p></li>
+<li><p>Follow the Carthage <a href="https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos">installation instructions</a></p></li>
+</ol>
+<a href='#dynamic-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='dynamic-framework'>Dynamic Framework</h4>
+
+<ol>
+<li><p>Head to our GitHub releases page and download and unzip Phaxio.framework.zip</p></li>
+<li><p>Drag Phaxio.framework to the <q>Embedded Binaries</q> section of your Xcode project&rsquo;s <q>General</q> settings and be sure to select <q>Copy items if needed</q></p></li>
+<li><p>Head to the <q>Build Phases</q> section of your Xcode project settings, and create a new <q>Run Script Build Phase</q>. Paste the followoing snippet into the text field:
+<code>bash &quot;${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Phaxio.framework/integrate-dynamic-framework.sd&quot;</code></p></li>
+</ol>
+<a href='#static-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='static-framework'>Static Framework</h4>
+
+<ol>
+<li><p>Head to our GitHub releases page and download and unzip PhaxioiOS.zip</p></li>
+<li><p>In Xcode, with your project open, click on <q>File</q> then <q>Add files to Project&hellip;</q></p></li>
+<li><p>Select Phaxio.framework in the directory you just unzipped.</p></li>
+<li><p>Make sure <q>Copy items if needed</q> is checked.</p></li>
+<li><p>Click <q>Add.</q></p></li>
+<li><p>In Xcode, click on <q>File</q>, then <q>Add files to Project&hellip;</q>.</p></li>
+<li><p>Select Phaxio.bundle, located within Phaxio.framework.</p></li>
+<li><p>Make sure <q>Copy items if needed</q> is checked.</p></li>
+<li><p>Click <q>Add</q>.</p></li>
+</ol>
+<a href='#setup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setup'>Setup</h2>
+
+<p>Sets the key and secret for Phaxio.
+&ldquo;`objective-c</p>
+
+<p>[PhaxioAPI setAPIKey:@<q>thisisthekey</q> andSecret:@<q>thisisthesecret</q>];</p>
+<pre class="highlight plaintext"><code>
+## Author
+
+[Nick Schulze](http://twitter.com/nickschulze) ([nschulze16@gmail.com](mailto:nschulze16@gmail.com)).
+
+## License
+
+This project is [UNLICENSED](http://unlicense.org/) and not endorsed by or affiliated with [Phaxio](http://www.phaxio.com).
+
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-12-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
