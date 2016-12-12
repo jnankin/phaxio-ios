@@ -1,4 +1,4 @@
-# ios-phaxio
+# phaxio-ios
 
 Send faxes with [Phaxio](http://www.phaxio.com).
 
