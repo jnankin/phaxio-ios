@@ -5,7 +5,7 @@ Send faxes with [Phaxio](http://www.phaxio.com).
 ## Installation
 
 ####Cocoa-Pods
-1. If you haven't alrady, install the latest version of [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
+1. If you haven't already, install the latest version of [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
 
 2. Add this line to your `Podfile`:
 ```pod 'Phaxio'```
